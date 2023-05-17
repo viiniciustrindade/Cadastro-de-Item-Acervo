@@ -1,0 +1,11 @@
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\bin\Debug\Cadastro de Item Acervo.exe.config
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\bin\Debug\Cadastro de Item Acervo.exe
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\bin\Debug\Cadastro de Item Acervo.pdb
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro de Item Acervo.csproj.AssemblyReference.cache
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro de Item Acervo.csproj.SuggestedBindingRedirects.cache
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro_de_Item_Acervo.Form1.resources
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro_de_Item_Acervo.Properties.Resources.resources
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro de Item Acervo.csproj.GenerateResource.cache
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro de Item Acervo.csproj.CoreCompileInputs.cache
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro de Item Acervo.exe
+C:\Users\estagiario3\Desktop\Movtech-Paciente-Api\Cadastro de Item Acervo\Cadastro de Item Acervo\obj\Debug\Cadastro de Item Acervo.pdb
