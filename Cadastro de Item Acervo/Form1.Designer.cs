@@ -49,7 +49,6 @@
             this.txtEdicao = new System.Windows.Forms.TextBox();
             this.txtAutor = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtEditora = new System.Windows.Forms.ComboBox();
             this.txtTipo = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtSecao = new System.Windows.Forms.ComboBox();
@@ -59,12 +58,11 @@
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.txtLocal = new System.Windows.Forms.ComboBox();
-            this.treinamentoDataSet = new Cadastro_de_Item_Acervo.TreinamentoDataSet();
             this.treinamentoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEditora = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,7 +195,6 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(109, 24);
             this.txtStatus.TabIndex = 9;
-            this.txtStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtExemplar
             // 
@@ -254,18 +251,6 @@
             this.label11.Size = new System.Drawing.Size(89, 16);
             this.label11.TabIndex = 19;
             this.label11.Text = "Nome editora";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // txtEditora
-            // 
-            this.txtEditora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEditora.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEditora.FormattingEnabled = true;
-            this.txtEditora.Location = new System.Drawing.Point(344, 148);
-            this.txtEditora.Name = "txtEditora";
-            this.txtEditora.Size = new System.Drawing.Size(385, 24);
-            this.txtEditora.TabIndex = 10;
             // 
             // txtTipo
             // 
@@ -358,6 +343,7 @@
             this.btn_Salvar.TabIndex = 13;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
             // btn_Excluir
             // 
@@ -384,16 +370,6 @@
             this.txtLocal.Size = new System.Drawing.Size(385, 24);
             this.txtLocal.TabIndex = 6;
             // 
-            // treinamentoDataSet
-            // 
-            this.treinamentoDataSet.DataSetName = "TreinamentoDataSet";
-            this.treinamentoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // treinamentoDataSetBindingSource
-            // 
-            this.treinamentoDataSetBindingSource.DataSource = this.treinamentoDataSet;
-            this.treinamentoDataSetBindingSource.Position = 0;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -411,12 +387,24 @@
             this.textBox1.Size = new System.Drawing.Size(109, 22);
             this.textBox1.TabIndex = 24;
             // 
+            // txtEditora
+            // 
+            this.txtEditora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEditora.BackColor = System.Drawing.SystemColors.Window;
+            this.txtEditora.FormattingEnabled = true;
+            this.txtEditora.Location = new System.Drawing.Point(344, 148);
+            this.txtEditora.Name = "txtEditora";
+            this.txtEditora.Size = new System.Drawing.Size(385, 24);
+            this.txtEditora.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(741, 488);
+            this.Controls.Add(this.txtEditora);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtLocal);
@@ -426,7 +414,6 @@
             this.Controls.Add(this.txtSecao);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtTipo);
-            this.Controls.Add(this.txtEditora);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.txtEdicao);
@@ -448,9 +435,8 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Cadastro de item no acervo";
+            this.Text = " Cadastro de Item Acervo";
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -478,7 +464,6 @@
         private System.Windows.Forms.TextBox txtEdicao;
         private System.Windows.Forms.ComboBox txtAutor;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox txtEditora;
         private System.Windows.Forms.ComboBox txtTipo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox txtSecao;
@@ -488,10 +473,11 @@
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.ComboBox txtLocal;
-        private TreinamentoDataSet treinamentoDataSet;
+       // private TreinamentoDataSet treinamentoDataSet;
         private System.Windows.Forms.BindingSource treinamentoDataSetBindingSource;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox txtEditora;
     }
 }
 
