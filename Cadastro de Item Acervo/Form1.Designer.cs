@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,17 +52,26 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtSecao = new System.Windows.Forms.ComboBox();
             this.dadosGrid = new System.Windows.Forms.DataGridView();
-            this.colCodSecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescSecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.txtLocal = new System.Windows.Forms.ComboBox();
-            this.treinamentoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtEditora = new System.Windows.Forms.ComboBox();
+            this.colCodItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNomeItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumExemplar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colColecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLocalizacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEditora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipoItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -180,7 +188,7 @@
             this.txtNomeLivro.BackColor = System.Drawing.SystemColors.Info;
             this.txtNomeLivro.Location = new System.Drawing.Point(344, 32);
             this.txtNomeLivro.Name = "txtNomeLivro";
-            this.txtNomeLivro.Size = new System.Drawing.Size(385, 22);
+            this.txtNomeLivro.Size = new System.Drawing.Size(357, 22);
             this.txtNomeLivro.TabIndex = 2;
             // 
             // txtStatus
@@ -190,7 +198,7 @@
             this.txtStatus.Items.AddRange(new object[] {
             "Disponivel",
             "Reservado",
-            "Editado"});
+            "Emprestado\t"});
             this.txtStatus.Location = new System.Drawing.Point(127, 146);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(109, 24);
@@ -211,7 +219,7 @@
             this.txtColecao.BackColor = System.Drawing.SystemColors.Info;
             this.txtColecao.Location = new System.Drawing.Point(344, 60);
             this.txtColecao.Name = "txtColecao";
-            this.txtColecao.Size = new System.Drawing.Size(385, 22);
+            this.txtColecao.Size = new System.Drawing.Size(357, 22);
             this.txtColecao.TabIndex = 4;
             // 
             // txtVolume
@@ -238,7 +246,7 @@
             this.txtAutor.FormattingEnabled = true;
             this.txtAutor.Location = new System.Drawing.Point(344, 118);
             this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(385, 24);
+            this.txtAutor.Size = new System.Drawing.Size(357, 24);
             this.txtAutor.TabIndex = 8;
             // 
             // label11
@@ -257,7 +265,6 @@
             this.txtTipo.BackColor = System.Drawing.SystemColors.Window;
             this.txtTipo.FormattingEnabled = true;
             this.txtTipo.Items.AddRange(new object[] {
-            "Combo",
             "Livro",
             "Revista",
             "Jornal",
@@ -288,7 +295,7 @@
             this.txtSecao.FormattingEnabled = true;
             this.txtSecao.Location = new System.Drawing.Point(344, 178);
             this.txtSecao.Name = "txtSecao";
-            this.txtSecao.Size = new System.Drawing.Size(385, 24);
+            this.txtSecao.Size = new System.Drawing.Size(357, 24);
             this.txtSecao.TabIndex = 12;
             // 
             // dadosGrid
@@ -302,41 +309,34 @@
             this.dadosGrid.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dadosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dadosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCodSecao,
-            this.colDescSecao});
+            this.colCodItem,
+            this.colNomeItem,
+            this.colCodVolume,
+            this.colNumExemplar,
+            this.colColecao,
+            this.colLocal,
+            this.colEdicao,
+            this.Autor,
+            this.colLocalizacao,
+            this.colStatus,
+            this.colEditora,
+            this.colTipoItem,
+            this.colSecao});
             this.dadosGrid.Location = new System.Drawing.Point(9, 244);
             this.dadosGrid.Margin = new System.Windows.Forms.Padding(4);
             this.dadosGrid.Name = "dadosGrid";
             this.dadosGrid.ReadOnly = true;
             this.dadosGrid.RowHeadersWidth = 51;
             this.dadosGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dadosGrid.Size = new System.Drawing.Size(720, 239);
+            this.dadosGrid.Size = new System.Drawing.Size(692, 254);
             this.dadosGrid.TabIndex = 15;
-            // 
-            // colCodSecao
-            // 
-            this.colCodSecao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colCodSecao.FillWeight = 152.2843F;
-            this.colCodSecao.HeaderText = "Codigo";
-            this.colCodSecao.MinimumWidth = 6;
-            this.colCodSecao.Name = "colCodSecao";
-            this.colCodSecao.ReadOnly = true;
-            this.colCodSecao.Width = 80;
-            // 
-            // colDescSecao
-            // 
-            this.colDescSecao.FillWeight = 73.85786F;
-            this.colDescSecao.HeaderText = "Descrição";
-            this.colDescSecao.MinimumWidth = 6;
-            this.colDescSecao.Name = "colDescSecao";
-            this.colDescSecao.ReadOnly = true;
             // 
             // btn_Salvar
             // 
             this.btn_Salvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Salvar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salvar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Salvar.Location = new System.Drawing.Point(495, 209);
+            this.btn_Salvar.Location = new System.Drawing.Point(467, 209);
             this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(113, 27);
@@ -351,7 +351,7 @@
             this.btn_Excluir.Enabled = false;
             this.btn_Excluir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.ForeColor = System.Drawing.Color.Black;
-            this.btn_Excluir.Location = new System.Drawing.Point(616, 209);
+            this.btn_Excluir.Location = new System.Drawing.Point(588, 209);
             this.btn_Excluir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(113, 27);
@@ -367,7 +367,7 @@
             this.txtLocal.FormattingEnabled = true;
             this.txtLocal.Location = new System.Drawing.Point(344, 88);
             this.txtLocal.Name = "txtLocal";
-            this.txtLocal.Size = new System.Drawing.Size(385, 24);
+            this.txtLocal.Size = new System.Drawing.Size(357, 24);
             this.txtLocal.TabIndex = 6;
             // 
             // label13
@@ -385,7 +385,7 @@
             this.textBox1.Location = new System.Drawing.Point(127, 118);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(109, 22);
-            this.textBox1.TabIndex = 24;
+            this.textBox1.TabIndex = 9;
             // 
             // txtEditora
             // 
@@ -395,15 +395,114 @@
             this.txtEditora.FormattingEnabled = true;
             this.txtEditora.Location = new System.Drawing.Point(344, 148);
             this.txtEditora.Name = "txtEditora";
-            this.txtEditora.Size = new System.Drawing.Size(385, 24);
-            this.txtEditora.TabIndex = 25;
+            this.txtEditora.Size = new System.Drawing.Size(357, 24);
+            this.txtEditora.TabIndex = 10;
+            // 
+            // colCodItem
+            // 
+            this.colCodItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.colCodItem.FillWeight = 152.2843F;
+            this.colCodItem.HeaderText = "Codigo";
+            this.colCodItem.MinimumWidth = 6;
+            this.colCodItem.Name = "colCodItem";
+            this.colCodItem.ReadOnly = true;
+            this.colCodItem.Width = 80;
+            // 
+            // colNomeItem
+            // 
+            this.colNomeItem.HeaderText = "Livro";
+            this.colNomeItem.MinimumWidth = 6;
+            this.colNomeItem.Name = "colNomeItem";
+            this.colNomeItem.ReadOnly = true;
+            // 
+            // colCodVolume
+            // 
+            this.colCodVolume.FillWeight = 73.85786F;
+            this.colCodVolume.HeaderText = "Volume";
+            this.colCodVolume.MinimumWidth = 6;
+            this.colCodVolume.Name = "colCodVolume";
+            this.colCodVolume.ReadOnly = true;
+            // 
+            // colNumExemplar
+            // 
+            this.colNumExemplar.HeaderText = "Exemplar";
+            this.colNumExemplar.MinimumWidth = 6;
+            this.colNumExemplar.Name = "colNumExemplar";
+            this.colNumExemplar.ReadOnly = true;
+            this.colNumExemplar.Visible = false;
+            // 
+            // colColecao
+            // 
+            this.colColecao.HeaderText = "Coleção";
+            this.colColecao.MinimumWidth = 6;
+            this.colColecao.Name = "colColecao";
+            this.colColecao.ReadOnly = true;
+            this.colColecao.Visible = false;
+            // 
+            // colLocal
+            // 
+            this.colLocal.HeaderText = "Local";
+            this.colLocal.MinimumWidth = 6;
+            this.colLocal.Name = "colLocal";
+            this.colLocal.ReadOnly = true;
+            // 
+            // colEdicao
+            // 
+            this.colEdicao.HeaderText = "Ano de Edição";
+            this.colEdicao.MinimumWidth = 6;
+            this.colEdicao.Name = "colEdicao";
+            this.colEdicao.ReadOnly = true;
+            this.colEdicao.Visible = false;
+            // 
+            // Autor
+            // 
+            this.Autor.HeaderText = "colAutor";
+            this.Autor.MinimumWidth = 6;
+            this.Autor.Name = "Autor";
+            this.Autor.ReadOnly = true;
+            // 
+            // colLocalizacao
+            // 
+            this.colLocalizacao.HeaderText = "Localização";
+            this.colLocalizacao.MinimumWidth = 6;
+            this.colLocalizacao.Name = "colLocalizacao";
+            this.colLocalizacao.ReadOnly = true;
+            this.colLocalizacao.Visible = false;
+            // 
+            // colStatus
+            // 
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.MinimumWidth = 6;
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            // 
+            // colEditora
+            // 
+            this.colEditora.HeaderText = "Editora";
+            this.colEditora.MinimumWidth = 6;
+            this.colEditora.Name = "colEditora";
+            this.colEditora.ReadOnly = true;
+            // 
+            // colTipoItem
+            // 
+            this.colTipoItem.HeaderText = "Tipo Item";
+            this.colTipoItem.MinimumWidth = 6;
+            this.colTipoItem.Name = "colTipoItem";
+            this.colTipoItem.ReadOnly = true;
+            // 
+            // colSecao
+            // 
+            this.colSecao.HeaderText = "Seção";
+            this.colSecao.MinimumWidth = 6;
+            this.colSecao.Name = "colSecao";
+            this.colSecao.ReadOnly = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(741, 488);
+            this.ClientSize = new System.Drawing.Size(713, 503);
             this.Controls.Add(this.txtEditora);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label13);
@@ -437,7 +536,6 @@
             this.Name = "Form1";
             this.Text = " Cadastro de Item Acervo";
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.treinamentoDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,16 +566,25 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox txtSecao;
         private System.Windows.Forms.DataGridView dadosGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodSecao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDescSecao;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.ComboBox txtLocal;
-       // private TreinamentoDataSet treinamentoDataSet;
-        private System.Windows.Forms.BindingSource treinamentoDataSetBindingSource;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox txtEditora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodVolume;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumExemplar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colColecao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLocal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEdicao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLocalizacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEditora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipoItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSecao;
     }
 }
 
