@@ -31,6 +31,7 @@ namespace Cadastro_de_Item_Acervo
                     command.Parameters.Add(new SqlParameter("@exemplar", item.numExemplar));
                     command.Parameters.Add(new SqlParameter("@nome", item.nomeItem));
                     command.Parameters.Add(new SqlParameter("@codAutor", autor.codAutor));
+                    command.Parameters.Add(new SqlParameter("@nomeAutor", autor.nomeAutor));
                     command.Parameters.Add(new SqlParameter("@codEditora", editora.codEditora));
                     command.Parameters.Add(new SqlParameter("@nomeEditora", editora.nomeEditora));
                     command.Parameters.Add(new SqlParameter("@tipoItem", item.tipoItem));
@@ -110,6 +111,7 @@ namespace Cadastro_de_Item_Acervo
                     command.Parameters.Add(new SqlParameter("@exemplar", item.numExemplar));
                     command.Parameters.Add(new SqlParameter("@nome", item.nomeItem));
                     command.Parameters.Add(new SqlParameter("@codAutor", autor.codAutor));
+                    command.Parameters.Add(new SqlParameter("@nomeAutor", autor.nomeAutor));
                     command.Parameters.Add(new SqlParameter("@codEditora", editora.codEditora));
                     command.Parameters.Add(new SqlParameter("@nomeEditora", editora.nomeEditora));
                     command.Parameters.Add(new SqlParameter("@tipoItem", item.tipoItem));
@@ -161,7 +163,7 @@ namespace Cadastro_de_Item_Acervo
                 return count;
             }
         }
-        public int GetCodAutor(AutorModel autor)
+        public string GetCodAutor(AutorModel autor)
         {
             try
             {
@@ -171,7 +173,7 @@ namespace Cadastro_de_Item_Acervo
                     sql.AppendLine($"SELECT codAutor FROM mvtBibAutor WHERE nomeAutor = @nomeAutor");
                     command.CommandText = sql.ToString();
                     command.Parameters.AddWithValue("@nomeAutor", autor.nomeAutor);
-                    int codAutor = Convert.ToInt32(command.ExecuteScalar());
+                    string codAutor = Convert.ToString(command.ExecuteScalar());
                     return codAutor;
                 }
             }
@@ -180,7 +182,7 @@ namespace Cadastro_de_Item_Acervo
                 throw ex;
             }
         }
-        public int GetCodEditora(EditoraModel editora)
+        public string GetCodEditora(EditoraModel editora)
         {
             try
             {
@@ -190,7 +192,7 @@ namespace Cadastro_de_Item_Acervo
                     sql.AppendLine($"SELECT codEditora FROM mvtBibEditora WHERE nomeEditora = @nomeEditora");
                     command.CommandText = sql.ToString();
                     command.Parameters.AddWithValue("@nomeEditora", editora.nomeEditora);
-                    int codEditora = Convert.ToInt32(command.ExecuteScalar());
+                    string codEditora = Convert.ToString(command.ExecuteScalar());
                     return codEditora;
                 }
             }
@@ -199,7 +201,7 @@ namespace Cadastro_de_Item_Acervo
                 throw ex;
             }
         }
-        public int GetCodSecao(SecaoModel secao)
+        public string GetCodSecao(SecaoModel secao)
         {
             try
             {
@@ -209,7 +211,7 @@ namespace Cadastro_de_Item_Acervo
                     sql.AppendLine($"SELECT codSecao FROM mvtBibSecao WHERE descSecao = @descSecao");
                     command.CommandText = sql.ToString();
                     command.Parameters.AddWithValue("@descSecao", secao.descSecao);
-                    int codSecao = Convert.ToInt32(command.ExecuteScalar());
+                    string codSecao = Convert.ToString(command.ExecuteScalar());
                     return codSecao;
                 }
             }
@@ -218,7 +220,7 @@ namespace Cadastro_de_Item_Acervo
                 throw ex;
             }
         }
-        public int GetCodLocal(LocalModel local)
+        public string GetCodLocal(LocalModel local)
         {
             try
             {
@@ -228,7 +230,7 @@ namespace Cadastro_de_Item_Acervo
                     sql.AppendLine($"SELECT codLocal FROM mvtBibLocal WHERE descLocal = @descLocal");
                     command.CommandText = sql.ToString();
                     command.Parameters.AddWithValue("@descLocal", local.nomeLocal);
-                    int codLocal = Convert.ToInt32(command.ExecuteScalar());
+                    string codLocal = Convert.ToString(command.ExecuteScalar());
                     return codLocal;
                 }
             }

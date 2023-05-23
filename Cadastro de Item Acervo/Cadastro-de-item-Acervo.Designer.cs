@@ -41,15 +41,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtCodLivro = new System.Windows.Forms.TextBox();
             this.txtNomeLivro = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.ComboBox();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.txtExemplar = new System.Windows.Forms.TextBox();
             this.txtColecao = new System.Windows.Forms.TextBox();
             this.txtVolume = new System.Windows.Forms.TextBox();
             this.txtEdicao = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtTipo = new System.Windows.Forms.ComboBox();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtSecao = new System.Windows.Forms.ComboBox();
             this.dadosGrid = new System.Windows.Forms.DataGridView();
             this.colCodItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomeItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +57,7 @@
             this.colColecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEdicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLocalizacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEditora = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,11 +65,15 @@
             this.colSecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.btn_Excluir = new System.Windows.Forms.Button();
-            this.txtLocal = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtEditora = new System.Windows.Forms.ComboBox();
+            this.txtLocalizacao = new System.Windows.Forms.TextBox();
             this.txtNomeAutor = new System.Windows.Forms.TextBox();
+            this.txtEditora = new System.Windows.Forms.TextBox();
+            this.txtLocal = new System.Windows.Forms.TextBox();
+            this.txtSecao = new System.Windows.Forms.TextBox();
+            this.btnCarregarSecao = new System.Windows.Forms.Button();
+            this.btnCarregarLocal = new System.Windows.Forms.Button();
+            this.brnCarregarEditora = new System.Windows.Forms.Button();
             this.btnCarregarAutor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 9);
+            this.label1.Location = new System.Drawing.Point(7, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 0;
@@ -111,7 +114,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(242, 121);
+            this.label4.Location = new System.Drawing.Point(243, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 3;
@@ -131,7 +134,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 179);
+            this.label6.Location = new System.Drawing.Point(7, 174);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 16);
             this.label6.TabIndex = 5;
@@ -140,7 +143,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 65);
+            this.label7.Location = new System.Drawing.Point(7, 62);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 16);
             this.label7.TabIndex = 6;
@@ -149,7 +152,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 37);
+            this.label8.Location = new System.Drawing.Point(7, 35);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 7;
@@ -158,7 +161,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 93);
+            this.label9.Location = new System.Drawing.Point(7, 90);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 16);
             this.label9.TabIndex = 8;
@@ -167,7 +170,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 149);
+            this.label10.Location = new System.Drawing.Point(7, 146);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 16);
             this.label10.TabIndex = 9;
@@ -177,7 +180,7 @@
             // 
             this.txtCodLivro.BackColor = System.Drawing.SystemColors.Window;
             this.txtCodLivro.Enabled = false;
-            this.txtCodLivro.Location = new System.Drawing.Point(127, 6);
+            this.txtCodLivro.Location = new System.Drawing.Point(128, 4);
             this.txtCodLivro.Name = "txtCodLivro";
             this.txtCodLivro.Size = new System.Drawing.Size(56, 22);
             this.txtCodLivro.TabIndex = 1;
@@ -192,26 +195,27 @@
             this.txtNomeLivro.Size = new System.Drawing.Size(357, 22);
             this.txtNomeLivro.TabIndex = 2;
             // 
-            // txtStatus
+            // cbxStatus
             // 
-            this.txtStatus.BackColor = System.Drawing.SystemColors.Window;
-            this.txtStatus.FormattingEnabled = true;
-            this.txtStatus.Items.AddRange(new object[] {
+            this.cbxStatus.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
             "Disponivel",
             "Reservado",
             "Emprestado\t"});
-            this.txtStatus.Location = new System.Drawing.Point(127, 146);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(109, 24);
-            this.txtStatus.TabIndex = 9;
+            this.cbxStatus.Location = new System.Drawing.Point(128, 144);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(109, 24);
+            this.cbxStatus.TabIndex = 14;
             // 
             // txtExemplar
             // 
             this.txtExemplar.BackColor = System.Drawing.SystemColors.Info;
-            this.txtExemplar.Location = new System.Drawing.Point(127, 62);
+            this.txtExemplar.Location = new System.Drawing.Point(128, 60);
             this.txtExemplar.Name = "txtExemplar";
             this.txtExemplar.Size = new System.Drawing.Size(109, 22);
             this.txtExemplar.TabIndex = 5;
+            this.txtExemplar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExemplar_KeyPress);
             // 
             // txtColecao
             // 
@@ -226,67 +230,58 @@
             // txtVolume
             // 
             this.txtVolume.BackColor = System.Drawing.SystemColors.Info;
-            this.txtVolume.Location = new System.Drawing.Point(127, 34);
+            this.txtVolume.Location = new System.Drawing.Point(128, 32);
             this.txtVolume.Name = "txtVolume";
             this.txtVolume.Size = new System.Drawing.Size(109, 22);
             this.txtVolume.TabIndex = 3;
+            this.txtVolume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVolume_KeyPress);
             // 
             // txtEdicao
             // 
             this.txtEdicao.BackColor = System.Drawing.SystemColors.Info;
-            this.txtEdicao.Location = new System.Drawing.Point(127, 90);
+            this.txtEdicao.Location = new System.Drawing.Point(128, 88);
             this.txtEdicao.Name = "txtEdicao";
             this.txtEdicao.Size = new System.Drawing.Size(109, 22);
-            this.txtEdicao.TabIndex = 7;
+            this.txtEdicao.TabIndex = 8;
+            this.txtEdicao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdicao_KeyPress);
             // 
             // label11
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(242, 151);
+            this.label11.Location = new System.Drawing.Point(243, 146);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 16);
             this.label11.TabIndex = 19;
             this.label11.Text = "Nome editora";
             // 
-            // txtTipo
+            // cbxTipo
             // 
-            this.txtTipo.BackColor = System.Drawing.SystemColors.Window;
-            this.txtTipo.FormattingEnabled = true;
-            this.txtTipo.Items.AddRange(new object[] {
+            this.cbxTipo.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Items.AddRange(new object[] {
             "Livro",
             "Revista",
             "Jornal",
             "DVD/CD",
             "Folheto",
             "Artigo"});
-            this.txtTipo.Location = new System.Drawing.Point(127, 176);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(109, 24);
-            this.txtTipo.TabIndex = 11;
+            this.cbxTipo.Location = new System.Drawing.Point(128, 174);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(109, 24);
+            this.cbxTipo.TabIndex = 17;
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(242, 181);
+            this.label12.Location = new System.Drawing.Point(243, 174);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 16);
             this.label12.TabIndex = 22;
             this.label12.Text = "Nome Seção";
-            // 
-            // txtSecao
-            // 
-            this.txtSecao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSecao.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSecao.FormattingEnabled = true;
-            this.txtSecao.Location = new System.Drawing.Point(344, 178);
-            this.txtSecao.Name = "txtSecao";
-            this.txtSecao.Size = new System.Drawing.Size(357, 24);
-            this.txtSecao.TabIndex = 12;
             // 
             // dadosGrid
             // 
@@ -306,20 +301,21 @@
             this.colColecao,
             this.colLocal,
             this.colEdicao,
-            this.Autor,
+            this.colAutor,
             this.colLocalizacao,
             this.colStatus,
             this.colEditora,
             this.colTipoItem,
             this.colSecao});
-            this.dadosGrid.Location = new System.Drawing.Point(9, 244);
+            this.dadosGrid.Location = new System.Drawing.Point(9, 236);
             this.dadosGrid.Margin = new System.Windows.Forms.Padding(4);
             this.dadosGrid.Name = "dadosGrid";
             this.dadosGrid.ReadOnly = true;
             this.dadosGrid.RowHeadersWidth = 51;
             this.dadosGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dadosGrid.Size = new System.Drawing.Size(692, 254);
-            this.dadosGrid.TabIndex = 15;
+            this.dadosGrid.Size = new System.Drawing.Size(692, 262);
+            this.dadosGrid.TabIndex = 20;
+            this.dadosGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosGrid_CellDoubleClick);
             // 
             // colCodItem
             // 
@@ -345,6 +341,7 @@
             this.colCodVolume.MinimumWidth = 6;
             this.colCodVolume.Name = "colCodVolume";
             this.colCodVolume.ReadOnly = true;
+            this.colCodVolume.Visible = false;
             // 
             // colNumExemplar
             // 
@@ -377,12 +374,12 @@
             this.colEdicao.ReadOnly = true;
             this.colEdicao.Visible = false;
             // 
-            // Autor
+            // colAutor
             // 
-            this.Autor.HeaderText = "colAutor";
-            this.Autor.MinimumWidth = 6;
-            this.Autor.Name = "Autor";
-            this.Autor.ReadOnly = true;
+            this.colAutor.HeaderText = "Autor";
+            this.colAutor.MinimumWidth = 6;
+            this.colAutor.Name = "colAutor";
+            this.colAutor.ReadOnly = true;
             // 
             // colLocalizacao
             // 
@@ -412,6 +409,7 @@
             this.colTipoItem.MinimumWidth = 6;
             this.colTipoItem.Name = "colTipoItem";
             this.colTipoItem.ReadOnly = true;
+            this.colTipoItem.Visible = false;
             // 
             // colSecao
             // 
@@ -425,11 +423,11 @@
             this.btn_Salvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Salvar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salvar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Salvar.Location = new System.Drawing.Point(467, 209);
+            this.btn_Salvar.Location = new System.Drawing.Point(467, 201);
             this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(113, 27);
-            this.btn_Salvar.TabIndex = 13;
+            this.btn_Salvar.TabIndex = 18;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = true;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
@@ -440,72 +438,125 @@
             this.btn_Excluir.Enabled = false;
             this.btn_Excluir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.ForeColor = System.Drawing.Color.Black;
-            this.btn_Excluir.Location = new System.Drawing.Point(588, 209);
+            this.btn_Excluir.Location = new System.Drawing.Point(588, 201);
             this.btn_Excluir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(113, 27);
-            this.btn_Excluir.TabIndex = 14;
+            this.btn_Excluir.TabIndex = 19;
             this.btn_Excluir.Text = "Excluir";
             this.btn_Excluir.UseVisualStyleBackColor = true;
-            // 
-            // txtLocal
-            // 
-            this.txtLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLocal.BackColor = System.Drawing.SystemColors.Window;
-            this.txtLocal.FormattingEnabled = true;
-            this.txtLocal.Location = new System.Drawing.Point(344, 88);
-            this.txtLocal.Name = "txtLocal";
-            this.txtLocal.Size = new System.Drawing.Size(357, 24);
-            this.txtLocal.TabIndex = 6;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 121);
+            this.label13.Location = new System.Drawing.Point(7, 119);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(80, 16);
             this.label13.TabIndex = 23;
             this.label13.Text = "Localização";
             // 
-            // textBox1
+            // txtLocalizacao
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Location = new System.Drawing.Point(127, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 22);
-            this.textBox1.TabIndex = 9;
+            this.txtLocalizacao.BackColor = System.Drawing.SystemColors.Info;
+            this.txtLocalizacao.Location = new System.Drawing.Point(128, 116);
+            this.txtLocalizacao.Name = "txtLocalizacao";
+            this.txtLocalizacao.Size = new System.Drawing.Size(109, 22);
+            this.txtLocalizacao.TabIndex = 11;
+            // 
+            // txtNomeAutor
+            // 
+            this.txtNomeAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeAutor.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNomeAutor.Location = new System.Drawing.Point(344, 116);
+            this.txtNomeAutor.Name = "txtNomeAutor";
+            this.txtNomeAutor.ReadOnly = true;
+            this.txtNomeAutor.Size = new System.Drawing.Size(328, 22);
+            this.txtNomeAutor.TabIndex = 9;
             // 
             // txtEditora
             // 
             this.txtEditora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditora.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEditora.FormattingEnabled = true;
-            this.txtEditora.Location = new System.Drawing.Point(344, 148);
+            this.txtEditora.Location = new System.Drawing.Point(344, 144);
             this.txtEditora.Name = "txtEditora";
-            this.txtEditora.Size = new System.Drawing.Size(357, 24);
-            this.txtEditora.TabIndex = 10;
+            this.txtEditora.ReadOnly = true;
+            this.txtEditora.Size = new System.Drawing.Size(328, 22);
+            this.txtEditora.TabIndex = 12;
             // 
-            // txtNomeAutor
+            // txtLocal
             // 
-            this.txtNomeAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeAutor.BackColor = System.Drawing.SystemColors.Info;
-            this.txtNomeAutor.Location = new System.Drawing.Point(344, 118);
-            this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(328, 22);
-            this.txtNomeAutor.TabIndex = 24;
+            this.txtLocal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLocal.Location = new System.Drawing.Point(344, 88);
+            this.txtLocal.Name = "txtLocal";
+            this.txtLocal.ReadOnly = true;
+            this.txtLocal.Size = new System.Drawing.Size(328, 22);
+            this.txtLocal.TabIndex = 6;
+            // 
+            // txtSecao
+            // 
+            this.txtSecao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSecao.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSecao.Location = new System.Drawing.Point(344, 172);
+            this.txtSecao.Name = "txtSecao";
+            this.txtSecao.ReadOnly = true;
+            this.txtSecao.Size = new System.Drawing.Size(328, 22);
+            this.txtSecao.TabIndex = 15;
+            // 
+            // btnCarregarSecao
+            // 
+            this.btnCarregarSecao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCarregarSecao.FlatAppearance.BorderSize = 0;
+            this.btnCarregarSecao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarregarSecao.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
+            this.btnCarregarSecao.Location = new System.Drawing.Point(678, 171);
+            this.btnCarregarSecao.Name = "btnCarregarSecao";
+            this.btnCarregarSecao.Size = new System.Drawing.Size(23, 22);
+            this.btnCarregarSecao.TabIndex = 16;
+            this.btnCarregarSecao.UseVisualStyleBackColor = true;
+            this.btnCarregarSecao.Click += new System.EventHandler(this.btnCarregarSecao_Click);
+            // 
+            // btnCarregarLocal
+            // 
+            this.btnCarregarLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCarregarLocal.FlatAppearance.BorderSize = 0;
+            this.btnCarregarLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarregarLocal.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
+            this.btnCarregarLocal.Location = new System.Drawing.Point(678, 87);
+            this.btnCarregarLocal.Name = "btnCarregarLocal";
+            this.btnCarregarLocal.Size = new System.Drawing.Size(23, 22);
+            this.btnCarregarLocal.TabIndex = 7;
+            this.btnCarregarLocal.UseVisualStyleBackColor = true;
+            this.btnCarregarLocal.Click += new System.EventHandler(this.btnCarregarLocal_Click);
+            // 
+            // brnCarregarEditora
+            // 
+            this.brnCarregarEditora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.brnCarregarEditora.FlatAppearance.BorderSize = 0;
+            this.brnCarregarEditora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brnCarregarEditora.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
+            this.brnCarregarEditora.Location = new System.Drawing.Point(678, 143);
+            this.brnCarregarEditora.Name = "brnCarregarEditora";
+            this.brnCarregarEditora.Size = new System.Drawing.Size(23, 22);
+            this.brnCarregarEditora.TabIndex = 13;
+            this.brnCarregarEditora.UseVisualStyleBackColor = true;
+            this.brnCarregarEditora.Click += new System.EventHandler(this.brnCarregarEditora_Click);
             // 
             // btnCarregarAutor
             // 
+            this.btnCarregarAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCarregarAutor.FlatAppearance.BorderSize = 0;
             this.btnCarregarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarregarAutor.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
-            this.btnCarregarAutor.Location = new System.Drawing.Point(678, 118);
+            this.btnCarregarAutor.Location = new System.Drawing.Point(678, 115);
             this.btnCarregarAutor.Name = "btnCarregarAutor";
             this.btnCarregarAutor.Size = new System.Drawing.Size(23, 22);
-            this.btnCarregarAutor.TabIndex = 25;
+            this.btnCarregarAutor.TabIndex = 10;
             this.btnCarregarAutor.UseVisualStyleBackColor = true;
             this.btnCarregarAutor.Click += new System.EventHandler(this.btnCarregarAutor_Click);
             // 
@@ -515,24 +566,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(713, 503);
+            this.Controls.Add(this.btnCarregarSecao);
+            this.Controls.Add(this.txtSecao);
+            this.Controls.Add(this.btnCarregarLocal);
+            this.Controls.Add(this.txtLocal);
+            this.Controls.Add(this.brnCarregarEditora);
+            this.Controls.Add(this.txtEditora);
             this.Controls.Add(this.btnCarregarAutor);
             this.Controls.Add(this.txtNomeAutor);
-            this.Controls.Add(this.txtEditora);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLocalizacao);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtLocal);
             this.Controls.Add(this.btn_Excluir);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.dadosGrid);
-            this.Controls.Add(this.txtSecao);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.cbxTipo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtEdicao);
             this.Controls.Add(this.txtVolume);
             this.Controls.Add(this.txtColecao);
             this.Controls.Add(this.txtExemplar);
-            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(this.cbxStatus);
             this.Controls.Add(this.txtNomeLivro);
             this.Controls.Add(this.txtCodLivro);
             this.Controls.Add(this.label10);
@@ -547,6 +601,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Cadastro de Item Acervo";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid)).EndInit();
@@ -569,22 +624,27 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCodLivro;
         private System.Windows.Forms.TextBox txtNomeLivro;
-        private System.Windows.Forms.ComboBox txtStatus;
+        private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.TextBox txtExemplar;
         private System.Windows.Forms.TextBox txtColecao;
         private System.Windows.Forms.TextBox txtVolume;
         private System.Windows.Forms.TextBox txtEdicao;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox txtTipo;
+        private System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox txtSecao;
         private System.Windows.Forms.DataGridView dadosGrid;
         private System.Windows.Forms.Button btn_Salvar;
         private System.Windows.Forms.Button btn_Excluir;
-        private System.Windows.Forms.ComboBox txtLocal;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox txtEditora;
+        private System.Windows.Forms.TextBox txtLocalizacao;
+        private System.Windows.Forms.TextBox txtNomeAutor;
+        private System.Windows.Forms.Button btnCarregarAutor;
+        private System.Windows.Forms.TextBox txtEditora;
+        private System.Windows.Forms.Button brnCarregarEditora;
+        private System.Windows.Forms.TextBox txtLocal;
+        private System.Windows.Forms.Button btnCarregarLocal;
+        private System.Windows.Forms.TextBox txtSecao;
+        private System.Windows.Forms.Button btnCarregarSecao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodVolume;
@@ -592,14 +652,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colColecao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocal;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEdicao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLocalizacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEditora;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSecao;
-        private System.Windows.Forms.TextBox txtNomeAutor;
-        private System.Windows.Forms.Button btnCarregarAutor;
     }
 }
 

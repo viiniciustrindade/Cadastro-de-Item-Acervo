@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace Cadastro_de_Item_Acervo
 {
-
+    [Table("mvtBibAutor")]
     public class AutorModel
     {
+        [Key()]
 
         public string codAutor { get; set; }
 

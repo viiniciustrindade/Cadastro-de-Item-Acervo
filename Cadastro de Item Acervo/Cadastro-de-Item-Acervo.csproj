@@ -50,6 +50,7 @@
     <Compile Include="AutorDAO.cs" />
     <Compile Include="AutorModel.cs" />
     <Compile Include="DaoConnection.cs" />
+    <Compile Include="EditoraDAO.cs" />
     <Compile Include="EditoraModel.cs" />
     <Compile Include="Cadastro-de-item-Acervo.cs">
       <SubType>Form</SubType>
@@ -57,6 +58,8 @@
     <Compile Include="Cadastro-de-item-Acervo.Designer.cs">
       <DependentUpon>Cadastro-de-item-Acervo.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalDAO.cs" />
+    <Compile Include="SecaoDAO.cs" />
     <Compile Include="Selecao-de-Autor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +72,24 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecaoModel.cs" />
+    <Compile Include="Selecao-Editora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selecao-Editora.Designer.cs">
+      <DependentUpon>Selecao-Editora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selecao-Local.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selecao-Local.Designer.cs">
+      <DependentUpon>Selecao-Local.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selecao-Secao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selecao-Secao.Designer.cs">
+      <DependentUpon>Selecao-Secao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cadastro-de-item-Acervo.resx">
       <DependentUpon>Cadastro-de-item-Acervo.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +105,15 @@
     </Compile>
     <EmbeddedResource Include="Selecao-de-Autor.resx">
       <DependentUpon>Selecao-de-Autor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selecao-Editora.resx">
+      <DependentUpon>Selecao-Editora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selecao-Local.resx">
+      <DependentUpon>Selecao-Local.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selecao-Secao.resx">
+      <DependentUpon>Selecao-Secao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

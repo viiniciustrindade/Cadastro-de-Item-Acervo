@@ -14,10 +14,10 @@ namespace Cadastro_de_Item_Acervo
 {
     public partial class Form2 : Form
     {
-         public string ValorEnviado { get; private set; }
+         public string nomeAutor { get; private set; }
          public void FecharFormulario()
          {
-             ValorEnviado = txtNomeAutor2.Text; // Valor a ser enviado de volta
+             nomeAutor = txtNomeAutor2.Text; 
 
              this.Close();
          }
@@ -72,6 +72,11 @@ namespace Cadastro_de_Item_Acervo
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
             FecharFormulario();
+        }
+
+        private void txtNomeAutor2_TextChanged(object sender, EventArgs e)
+        {
+             
         }
     }
 }

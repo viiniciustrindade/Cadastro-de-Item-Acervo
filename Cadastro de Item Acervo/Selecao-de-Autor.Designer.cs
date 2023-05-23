@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dadosGrid2 = new System.Windows.Forms.DataGridView();
             this.colcodigoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colnomeDoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +54,12 @@
             this.colcodigoAutor,
             this.colnomeDoAutor});
             this.dadosGrid2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dadosGrid2.Location = new System.Drawing.Point(12, 84);
+            this.dadosGrid2.Location = new System.Drawing.Point(12, 62);
             this.dadosGrid2.Name = "dadosGrid2";
             this.dadosGrid2.ReadOnly = true;
             this.dadosGrid2.RowHeadersWidth = 51;
             this.dadosGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dadosGrid2.Size = new System.Drawing.Size(572, 284);
+            this.dadosGrid2.Size = new System.Drawing.Size(572, 237);
             this.dadosGrid2.TabIndex = 20;
             this.dadosGrid2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosGrid2_CellContentDoubleClick);
             // 
@@ -83,7 +84,7 @@
             // txtNomeAutor
             // 
             this.txtNomeAutor.AutoSize = true;
-            this.txtNomeAutor.Location = new System.Drawing.Point(9, 59);
+            this.txtNomeAutor.Location = new System.Drawing.Point(9, 37);
             this.txtNomeAutor.Name = "txtNomeAutor";
             this.txtNomeAutor.Size = new System.Drawing.Size(78, 16);
             this.txtNomeAutor.TabIndex = 21;
@@ -91,14 +92,18 @@
             // 
             // txtNomeAutor2
             // 
-            this.txtNomeAutor2.Location = new System.Drawing.Point(93, 56);
+            this.txtNomeAutor2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeAutor2.Location = new System.Drawing.Point(93, 34);
             this.txtNomeAutor2.Name = "txtNomeAutor2";
             this.txtNomeAutor2.Size = new System.Drawing.Size(392, 22);
             this.txtNomeAutor2.TabIndex = 22;
+            this.txtNomeAutor2.TextChanged += new System.EventHandler(this.txtNomeAutor2_TextChanged);
             // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Location = new System.Drawing.Point(491, 56);
+            this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSelecionar.Location = new System.Drawing.Point(491, 34);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(93, 22);
             this.btnSelecionar.TabIndex = 23;
@@ -109,7 +114,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 31);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 24;
@@ -118,7 +123,7 @@
             // txtcodAutor
             // 
             this.txtcodAutor.Enabled = false;
-            this.txtcodAutor.Location = new System.Drawing.Point(93, 28);
+            this.txtcodAutor.Location = new System.Drawing.Point(93, 6);
             this.txtcodAutor.Name = "txtcodAutor";
             this.txtcodAutor.Size = new System.Drawing.Size(63, 22);
             this.txtcodAutor.TabIndex = 25;
@@ -127,14 +132,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 380);
+            this.ClientSize = new System.Drawing.Size(600, 311);
             this.Controls.Add(this.txtcodAutor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.txtNomeAutor2);
             this.Controls.Add(this.txtNomeAutor);
             this.Controls.Add(this.dadosGrid2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleção de Autor";
             this.Load += new System.EventHandler(this.Form2_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid2)).EndInit();

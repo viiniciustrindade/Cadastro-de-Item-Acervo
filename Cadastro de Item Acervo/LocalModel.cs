@@ -13,7 +13,7 @@ namespace Cadastro_de_Item_Acervo
     {
         [Key()]
 
-        public int codLocal { get; set; }
+        public string codLocal { get; set; }
         public string nomeLocal { get; set; }
     }
 }
