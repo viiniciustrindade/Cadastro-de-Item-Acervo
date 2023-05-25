@@ -39,16 +39,9 @@ namespace Cadastro_de_Item_Acervo
                 }
             }
         }
-
-        private void btnSelecionar_Click(object sender, EventArgs e)
-        {
-            FecharFormulario();
-        }
         private void Selecao_Local_Load(object sender, EventArgs e)
         {
             CarregarUsuariosGrid();
-
-            btnSelecionar.Enabled = false;
         }
 
         private void txtNomeLocal2_TextChanged(object sender, EventArgs e)
@@ -70,15 +63,20 @@ namespace Cadastro_de_Item_Acervo
                 txtcodLocal2.Text = dadosGrid4.Rows[e.RowIndex].Cells[colcodigoLocal.Index].Value + "";
                 txtNomeLocal2.Text = dadosGrid4.Rows[e.RowIndex].Cells[colNomeLocal.Index].Value + "";
 
-                if (string.IsNullOrEmpty(this.txtNomeAutor.Text))
-                {
-                    btnSelecionar.Enabled = false;
+                FecharFormulario();
 
-                }
-                else
-                {
-                    btnSelecionar.Enabled = true;
-                }
+            }
+        }
+
+        private void txtcodLocal2_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtcodLocal2.Text.Trim();
+
+            foreach (DataGridViewRow row in dadosGrid4.Rows)
+            {
+                string nomeAutor = row.Cells[colcodigoLocal.Index].Value.ToString().Trim();
+                bool exibir = nomeAutor.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
+                row.Visible = exibir;
             }
         }
     }

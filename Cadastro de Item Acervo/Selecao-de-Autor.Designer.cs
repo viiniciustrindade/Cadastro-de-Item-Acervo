@@ -34,7 +34,6 @@
             this.colnomeDoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNomeAutor = new System.Windows.Forms.Label();
             this.txtNomeAutor2 = new System.Windows.Forms.TextBox();
-            this.btnSelecionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcodAutor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid2)).BeginInit();
@@ -96,20 +95,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeAutor2.Location = new System.Drawing.Point(93, 34);
             this.txtNomeAutor2.Name = "txtNomeAutor2";
-            this.txtNomeAutor2.Size = new System.Drawing.Size(392, 22);
+            this.txtNomeAutor2.Size = new System.Drawing.Size(491, 22);
             this.txtNomeAutor2.TabIndex = 22;
             this.txtNomeAutor2.TextChanged += new System.EventHandler(this.txtNomeAutor2_TextChanged);
-            // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelecionar.Location = new System.Drawing.Point(491, 34);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(93, 22);
-            this.btnSelecionar.TabIndex = 23;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = true;
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // label1
             // 
@@ -122,11 +110,11 @@
             // 
             // txtcodAutor
             // 
-            this.txtcodAutor.Enabled = false;
             this.txtcodAutor.Location = new System.Drawing.Point(93, 6);
             this.txtcodAutor.Name = "txtcodAutor";
             this.txtcodAutor.Size = new System.Drawing.Size(63, 22);
             this.txtcodAutor.TabIndex = 25;
+            this.txtcodAutor.TextChanged += new System.EventHandler(this.txtcodAutor_TextChanged);
             // 
             // Form2
             // 
@@ -135,7 +123,6 @@
             this.ClientSize = new System.Drawing.Size(600, 311);
             this.Controls.Add(this.txtcodAutor);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.txtNomeAutor2);
             this.Controls.Add(this.txtNomeAutor);
             this.Controls.Add(this.dadosGrid2);
@@ -155,7 +142,6 @@
         private System.Windows.Forms.DataGridView dadosGrid2;
         private System.Windows.Forms.Label txtNomeAutor;
         private System.Windows.Forms.TextBox txtNomeAutor2;
-        private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtcodAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colcodigoAutor;

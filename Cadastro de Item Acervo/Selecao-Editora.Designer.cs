@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Selecao_Editora));
             this.txtcodEditora2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSelecionar = new System.Windows.Forms.Button();
             this.txtNomeEditora2 = new System.Windows.Forms.TextBox();
             this.txtNomeAutor = new System.Windows.Forms.Label();
             this.dadosGrid3 = new System.Windows.Forms.DataGridView();
@@ -42,11 +41,11 @@
             // 
             // txtcodEditora2
             // 
-            this.txtcodEditora2.Enabled = false;
             this.txtcodEditora2.Location = new System.Drawing.Point(93, 8);
             this.txtcodEditora2.Name = "txtcodEditora2";
             this.txtcodEditora2.Size = new System.Drawing.Size(63, 22);
             this.txtcodEditora2.TabIndex = 37;
+            this.txtcodEditora2.TextChanged += new System.EventHandler(this.txtcodEditora2_TextChanged);
             // 
             // label1
             // 
@@ -57,24 +56,13 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Codigo";
             // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelecionar.Location = new System.Drawing.Point(491, 36);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(93, 22);
-            this.btnSelecionar.TabIndex = 35;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = true;
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
-            // 
             // txtNomeEditora2
             // 
             this.txtNomeEditora2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeEditora2.Location = new System.Drawing.Point(93, 36);
             this.txtNomeEditora2.Name = "txtNomeEditora2";
-            this.txtNomeEditora2.Size = new System.Drawing.Size(392, 22);
+            this.txtNomeEditora2.Size = new System.Drawing.Size(490, 22);
             this.txtNomeEditora2.TabIndex = 34;
             this.txtNomeEditora2.TextChanged += new System.EventHandler(this.txtNomeEditora2_TextChanged);
             // 
@@ -135,7 +123,6 @@
             this.ClientSize = new System.Drawing.Size(597, 338);
             this.Controls.Add(this.txtcodEditora2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.txtNomeEditora2);
             this.Controls.Add(this.txtNomeAutor);
             this.Controls.Add(this.dadosGrid3);
@@ -154,7 +141,6 @@
 
         private System.Windows.Forms.TextBox txtcodEditora2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.TextBox txtNomeEditora2;
         private System.Windows.Forms.Label txtNomeAutor;
         private System.Windows.Forms.DataGridView dadosGrid3;

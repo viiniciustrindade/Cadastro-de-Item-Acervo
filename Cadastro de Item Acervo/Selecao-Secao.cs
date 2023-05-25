@@ -46,8 +46,6 @@ namespace Cadastro_de_Item_Acervo
         private void Selecao_Secao_Load(object sender, EventArgs e)
         {
             CarregarUsuariosGrid();
-
-            btnSelecionar.Enabled = false;
         }
 
         private void txtNomeSecao2_TextChanged(object sender, EventArgs e)
@@ -69,15 +67,19 @@ namespace Cadastro_de_Item_Acervo
                 txtcodSecao2.Text = dadosGrid5.Rows[e.RowIndex].Cells[colCodSecao.Index].Value + "";
                 txtNomeSecao2.Text = dadosGrid5.Rows[e.RowIndex].Cells[colSecao.Index].Value + "";
 
-                if (string.IsNullOrEmpty(this.txtNomeSecao2.Text))
-                {
-                    btnSelecionar.Enabled = false;
+                FecharFormulario();
+            }
+        }
 
-                }
-                else
-                {
-                    btnSelecionar.Enabled = true;
-                }
+        private void txtcodSecao2_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtcodSecao2.Text.Trim();
+
+            foreach (DataGridViewRow row in dadosGrid5.Rows)
+            {
+                string nomeAutor = row.Cells[colCodSecao.Index].Value.ToString().Trim();
+                bool exibir = nomeAutor.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
+                row.Visible = exibir;
             }
         }
     }

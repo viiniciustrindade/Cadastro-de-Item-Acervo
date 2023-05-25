@@ -48,35 +48,37 @@ namespace Cadastro_de_Item_Acervo
                 txtcodAutor.Text = dadosGrid2.Rows[e.RowIndex].Cells[colcodigoAutor.Index].Value + "";
                 txtNomeAutor2.Text = dadosGrid2.Rows[e.RowIndex].Cells[colnomeDoAutor.Index].Value + "";
 
-                if (string.IsNullOrEmpty(this.txtNomeAutor.Text))
-                {
-                    btnSelecionar.Enabled = false;
+                FecharFormulario();
 
-                }
-                else
-                {
-                    btnSelecionar.Enabled = true;
-                }
             }
         }
 
         private void Form2_Load_1(object sender, EventArgs e)
         {
             CarregarUsuariosGrid();
-
-            btnSelecionar.Enabled = false;
         }
-
- 
-
-        private void btnSelecionar_Click(object sender, EventArgs e)
-        {
-            FecharFormulario();
-        }
-
         private void txtNomeAutor2_TextChanged(object sender, EventArgs e)
         {
-             
+            string filtro = txtNomeAutor2.Text.Trim();
+
+            foreach (DataGridViewRow row in dadosGrid2.Rows)
+            {
+                string nomeAutor = row.Cells[colnomeDoAutor.Index].Value.ToString().Trim();
+                bool exibir = nomeAutor.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
+                row.Visible = exibir;
+            }
+        }
+
+        private void txtcodAutor_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtcodAutor.Text.Trim();
+
+            foreach (DataGridViewRow row in dadosGrid2.Rows)
+            {
+                string nomeAutor = row.Cells[colcodigoAutor.Index].Value.ToString().Trim();
+                bool exibir = nomeAutor.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
+                row.Visible = exibir;
+            }
         }
     }
 }

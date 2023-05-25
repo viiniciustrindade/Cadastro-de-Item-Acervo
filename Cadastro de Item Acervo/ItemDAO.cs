@@ -39,7 +39,7 @@ namespace Cadastro_de_Item_Acervo
                     command.Parameters.Add(new SqlParameter("@local", local.nomeLocal));
                     command.Parameters.Add(new SqlParameter("@volume", item.volume));
                     command.Parameters.Add(new SqlParameter("@edicao", item.anoEdicao));
-                    command.Parameters.Add(new SqlParameter("@localizacao", item.nomeColecao));
+                    command.Parameters.Add(new SqlParameter("@localizacao", item.localizacao));
                     command.Parameters.Add(new SqlParameter("@secao", secao.descSecao));
                     command.Parameters.Add(new SqlParameter("@codSecao", secao.codSecao));
                     command.Parameters.Add(new SqlParameter("@status", item.status));
@@ -119,7 +119,7 @@ namespace Cadastro_de_Item_Acervo
                     command.Parameters.Add(new SqlParameter("@local", local.nomeLocal));
                     command.Parameters.Add(new SqlParameter("@volume", item.volume));
                     command.Parameters.Add(new SqlParameter("@edicao", item.anoEdicao));
-                    command.Parameters.Add(new SqlParameter("@localizacao", item.nomeColecao));
+                    command.Parameters.Add(new SqlParameter("@localizacao", item.localizacao));
                     command.Parameters.Add(new SqlParameter("@secao", secao.descSecao));
                     command.Parameters.Add(new SqlParameter("@codSecao", secao.codSecao));
                     command.Parameters.Add(new SqlParameter("@status", item.status));

@@ -42,13 +42,6 @@ namespace Cadastro_de_Item_Acervo
         private void Selecao_Editora_Load(object sender, EventArgs e)
         {
             CarregarUsuariosGrid();
-
-            btnSelecionar.Enabled = false;
-        }
-
-        private void btnSelecionar_Click(object sender, EventArgs e)
-        {
-            FecharFormulario();
         }
         private void txtNomeEditora2_TextChanged(object sender, EventArgs e)
         {
@@ -69,15 +62,19 @@ namespace Cadastro_de_Item_Acervo
                 txtcodEditora2.Text = dadosGrid3.Rows[e.RowIndex].Cells[colcodigoEditora.Index].Value + "";
                 txtNomeEditora2.Text = dadosGrid3.Rows[e.RowIndex].Cells[colNomeEditora.Index].Value + "";
 
-                if (string.IsNullOrEmpty(this.txtNomeAutor.Text))
-                {
-                    btnSelecionar.Enabled = false;
+                FecharFormulario();
+            }
+        }
 
-                }
-                else
-                {
-                    btnSelecionar.Enabled = true;
-                }
+        private void txtcodEditora2_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtcodEditora2.Text.Trim();
+
+            foreach (DataGridViewRow row in dadosGrid3.Rows)
+            {
+                string nomeAutor = row.Cells[colcodigoEditora.Index].Value.ToString().Trim();
+                bool exibir = nomeAutor.IndexOf(filtro, StringComparison.OrdinalIgnoreCase) >= 0;
+                row.Visible = exibir;
             }
         }
     }

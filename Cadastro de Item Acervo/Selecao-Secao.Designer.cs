@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Selecao_Secao));
             this.txtcodSecao2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSelecionar = new System.Windows.Forms.Button();
             this.txtNomeSecao2 = new System.Windows.Forms.TextBox();
             this.label = new System.Windows.Forms.Label();
             this.dadosGrid5 = new System.Windows.Forms.DataGridView();
@@ -42,11 +41,11 @@
             // 
             // txtcodSecao2
             // 
-            this.txtcodSecao2.Enabled = false;
             this.txtcodSecao2.Location = new System.Drawing.Point(95, 10);
             this.txtcodSecao2.Name = "txtcodSecao2";
             this.txtcodSecao2.Size = new System.Drawing.Size(63, 22);
             this.txtcodSecao2.TabIndex = 49;
+            this.txtcodSecao2.TextChanged += new System.EventHandler(this.txtcodSecao2_TextChanged);
             // 
             // label1
             // 
@@ -57,24 +56,13 @@
             this.label1.TabIndex = 48;
             this.label1.Text = "Codigo";
             // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelecionar.Location = new System.Drawing.Point(493, 38);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(97, 22);
-            this.btnSelecionar.TabIndex = 47;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.UseVisualStyleBackColor = true;
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
-            // 
             // txtNomeSecao2
             // 
             this.txtNomeSecao2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeSecao2.Location = new System.Drawing.Point(95, 38);
             this.txtNomeSecao2.Name = "txtNomeSecao2";
-            this.txtNomeSecao2.Size = new System.Drawing.Size(392, 22);
+            this.txtNomeSecao2.Size = new System.Drawing.Size(493, 22);
             this.txtNomeSecao2.TabIndex = 46;
             this.txtNomeSecao2.TextChanged += new System.EventHandler(this.txtNomeSecao2_TextChanged);
             // 
@@ -135,7 +123,6 @@
             this.ClientSize = new System.Drawing.Size(600, 311);
             this.Controls.Add(this.txtcodSecao2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.txtNomeSecao2);
             this.Controls.Add(this.label);
             this.Controls.Add(this.dadosGrid5);
@@ -154,7 +141,6 @@
 
         private System.Windows.Forms.TextBox txtcodSecao2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.TextBox txtNomeSecao2;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.DataGridView dadosGrid5;
