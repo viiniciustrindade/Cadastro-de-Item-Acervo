@@ -129,7 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Selecao_Editora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Selecao de Editora";
+            this.Text = "Seleção de editora";
             this.Load += new System.EventHandler(this.Selecao_Editora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid3)).EndInit();
             this.ResumeLayout(false);

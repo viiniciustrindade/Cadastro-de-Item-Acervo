@@ -39,10 +39,6 @@ namespace Cadastro_de_Item_Acervo
                 }
             }
         }
-        private void btnSelecionar_Click(object sender, EventArgs e)
-        {
-            FecharFormulario();
-        }
         private void Selecao_Secao_Load(object sender, EventArgs e)
         {
             CarregarUsuariosGrid();

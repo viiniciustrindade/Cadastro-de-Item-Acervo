@@ -71,9 +71,9 @@
             this.txtNomeAutor.AutoSize = true;
             this.txtNomeAutor.Location = new System.Drawing.Point(9, 39);
             this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(50, 16);
+            this.txtNomeAutor.Size = new System.Drawing.Size(40, 16);
             this.txtNomeAutor.TabIndex = 39;
-            this.txtNomeAutor.Text = "Editora";
+            this.txtNomeAutor.Text = "Local";
             // 
             // dadosGrid4
             // 
@@ -129,7 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Selecao_Local";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Seleção de Local";
+            this.Text = "Seleção de local";
             this.Load += new System.EventHandler(this.Selecao_Local_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid4)).EndInit();
             this.ResumeLayout(false);

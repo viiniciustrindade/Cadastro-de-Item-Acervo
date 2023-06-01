@@ -129,7 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Seleção de Autor";
+            this.Text = "Seleção de autor";
             this.Load += new System.EventHandler(this.Form2_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid2)).EndInit();
             this.ResumeLayout(false);

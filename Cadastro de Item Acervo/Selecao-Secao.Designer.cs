@@ -129,7 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Selecao_Secao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Selecao_Secao";
+            this.Text = "Seleção de seção";
             this.Load += new System.EventHandler(this.Selecao_Secao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid5)).EndInit();
             this.ResumeLayout(false);
