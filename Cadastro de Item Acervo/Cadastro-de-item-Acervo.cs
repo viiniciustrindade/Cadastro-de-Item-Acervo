@@ -163,7 +163,7 @@ namespace Cadastro_de_Item_Acervo
                                 anoEdicao = txtEdicao.Text,
                                 localizacao = txtLocalizacao.Text,
                                 nomeColecao = txtColecao.Text,
-                                status = cbxStatus.Text
+                                status = "Devolvido"
                             }, new AutorModel()
                             {
                                 codAutor = codAutor,
@@ -195,7 +195,7 @@ namespace Cadastro_de_Item_Acervo
                                 anoEdicao = txtEdicao.Text,
                                 localizacao = txtLocalizacao.Text,
                                 nomeColecao = txtColecao.Text,
-                                status = cbxStatus.Text
+                                status = "Devolvido"
 
                             }, new AutorModel()
                             {
