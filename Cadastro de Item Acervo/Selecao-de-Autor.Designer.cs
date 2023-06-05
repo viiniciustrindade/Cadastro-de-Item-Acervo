@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dadosGrid2 = new System.Windows.Forms.DataGridView();
-            this.colcodigoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colnomeDoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNomeAutor = new System.Windows.Forms.Label();
             this.txtNomeAutor2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcodAutor = new System.Windows.Forms.TextBox();
+            this.colcodigoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colnomeDoAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,40 +62,20 @@
             this.dadosGrid2.TabIndex = 20;
             this.dadosGrid2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosGrid2_CellContentDoubleClick);
             // 
-            // colcodigoAutor
-            // 
-            this.colcodigoAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colcodigoAutor.FillWeight = 152.2843F;
-            this.colcodigoAutor.HeaderText = "Codigo";
-            this.colcodigoAutor.MinimumWidth = 6;
-            this.colcodigoAutor.Name = "colcodigoAutor";
-            this.colcodigoAutor.ReadOnly = true;
-            this.colcodigoAutor.Width = 80;
-            // 
-            // colnomeDoAutor
-            // 
-            this.colnomeDoAutor.FillWeight = 73.85786F;
-            this.colnomeDoAutor.HeaderText = "Nome do Autor";
-            this.colnomeDoAutor.MinimumWidth = 6;
-            this.colnomeDoAutor.Name = "colnomeDoAutor";
-            this.colnomeDoAutor.ReadOnly = true;
-            // 
             // txtNomeAutor
             // 
             this.txtNomeAutor.AutoSize = true;
             this.txtNomeAutor.Location = new System.Drawing.Point(9, 37);
             this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(78, 16);
+            this.txtNomeAutor.Size = new System.Drawing.Size(77, 16);
             this.txtNomeAutor.TabIndex = 21;
-            this.txtNomeAutor.Text = "Nome Autor";
+            this.txtNomeAutor.Text = "Nome autor";
             // 
             // txtNomeAutor2
             // 
-            this.txtNomeAutor2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeAutor2.Location = new System.Drawing.Point(93, 34);
             this.txtNomeAutor2.Name = "txtNomeAutor2";
-            this.txtNomeAutor2.Size = new System.Drawing.Size(491, 22);
+            this.txtNomeAutor2.Size = new System.Drawing.Size(242, 22);
             this.txtNomeAutor2.TabIndex = 22;
             this.txtNomeAutor2.TextChanged += new System.EventHandler(this.txtNomeAutor2_TextChanged);
             // 
@@ -106,7 +86,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Código";
             // 
             // txtcodAutor
             // 
@@ -115,6 +95,24 @@
             this.txtcodAutor.Size = new System.Drawing.Size(63, 22);
             this.txtcodAutor.TabIndex = 25;
             this.txtcodAutor.TextChanged += new System.EventHandler(this.txtcodAutor_TextChanged);
+            // 
+            // colcodigoAutor
+            // 
+            this.colcodigoAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.colcodigoAutor.FillWeight = 152.2843F;
+            this.colcodigoAutor.HeaderText = "Código";
+            this.colcodigoAutor.MinimumWidth = 6;
+            this.colcodigoAutor.Name = "colcodigoAutor";
+            this.colcodigoAutor.ReadOnly = true;
+            this.colcodigoAutor.Width = 80;
+            // 
+            // colnomeDoAutor
+            // 
+            this.colnomeDoAutor.FillWeight = 73.85786F;
+            this.colnomeDoAutor.HeaderText = "Nome autor";
+            this.colnomeDoAutor.MinimumWidth = 6;
+            this.colnomeDoAutor.Name = "colnomeDoAutor";
+            this.colnomeDoAutor.ReadOnly = true;
             // 
             // Form2
             // 

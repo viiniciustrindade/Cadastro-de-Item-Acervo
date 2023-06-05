@@ -96,7 +96,6 @@ namespace Cadastro_de_Item_Acervo
             cbxTipo.SelectedIndex = -1;
             txtSecao.Text = "";
         }
-
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
 

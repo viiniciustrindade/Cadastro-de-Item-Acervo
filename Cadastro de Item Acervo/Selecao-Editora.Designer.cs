@@ -54,15 +54,13 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Código";
             // 
             // txtNomeEditora2
             // 
-            this.txtNomeEditora2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeEditora2.Location = new System.Drawing.Point(93, 36);
             this.txtNomeEditora2.Name = "txtNomeEditora2";
-            this.txtNomeEditora2.Size = new System.Drawing.Size(490, 22);
+            this.txtNomeEditora2.Size = new System.Drawing.Size(259, 22);
             this.txtNomeEditora2.TabIndex = 34;
             this.txtNomeEditora2.TextChanged += new System.EventHandler(this.txtNomeEditora2_TextChanged);
             // 
@@ -102,7 +100,7 @@
             // 
             this.colcodigoEditora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.colcodigoEditora.FillWeight = 152.2843F;
-            this.colcodigoEditora.HeaderText = "Codigo";
+            this.colcodigoEditora.HeaderText = "Código";
             this.colcodigoEditora.MinimumWidth = 6;
             this.colcodigoEditora.Name = "colcodigoEditora";
             this.colcodigoEditora.ReadOnly = true;

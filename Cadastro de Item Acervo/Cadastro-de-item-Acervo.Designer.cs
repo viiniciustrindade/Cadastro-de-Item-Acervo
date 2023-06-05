@@ -85,12 +85,10 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo";
+            this.label1.Text = "Código";
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(243, 35);
             this.label2.Name = "label2";
@@ -100,8 +98,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(243, 90);
             this.label3.Name = "label3";
@@ -111,8 +107,6 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(243, 118);
             this.label4.Name = "label4";
@@ -122,8 +116,6 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(243, 62);
             this.label5.Name = "label5";
@@ -138,7 +130,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 16);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Tipo de Item";
+            this.label6.Text = "Tipo de item";
             // 
             // label7
             // 
@@ -187,22 +179,20 @@
             // 
             // txtNomeLivro
             // 
-            this.txtNomeLivro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeLivro.BackColor = System.Drawing.SystemColors.Info;
             this.txtNomeLivro.Location = new System.Drawing.Point(344, 32);
             this.txtNomeLivro.Name = "txtNomeLivro";
-            this.txtNomeLivro.Size = new System.Drawing.Size(357, 22);
+            this.txtNomeLivro.Size = new System.Drawing.Size(229, 22);
             this.txtNomeLivro.TabIndex = 2;
             // 
             // cbxStatus
             // 
             this.cbxStatus.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxStatus.FormattingEnabled = true;
             this.cbxStatus.Items.AddRange(new object[] {
             "Disponivel",
-            "Reservado",
-            "Emprestado\t"});
+            "\t"});
             this.cbxStatus.Location = new System.Drawing.Point(128, 144);
             this.cbxStatus.Name = "cbxStatus";
             this.cbxStatus.Size = new System.Drawing.Size(109, 24);
@@ -213,18 +203,16 @@
             this.txtExemplar.BackColor = System.Drawing.SystemColors.Info;
             this.txtExemplar.Location = new System.Drawing.Point(128, 60);
             this.txtExemplar.Name = "txtExemplar";
-            this.txtExemplar.Size = new System.Drawing.Size(109, 22);
+            this.txtExemplar.Size = new System.Drawing.Size(56, 22);
             this.txtExemplar.TabIndex = 5;
             this.txtExemplar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExemplar_KeyPress);
             // 
             // txtColecao
             // 
-            this.txtColecao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtColecao.BackColor = System.Drawing.SystemColors.Info;
             this.txtColecao.Location = new System.Drawing.Point(344, 60);
             this.txtColecao.Name = "txtColecao";
-            this.txtColecao.Size = new System.Drawing.Size(357, 22);
+            this.txtColecao.Size = new System.Drawing.Size(229, 22);
             this.txtColecao.TabIndex = 4;
             // 
             // txtVolume
@@ -232,7 +220,7 @@
             this.txtVolume.BackColor = System.Drawing.SystemColors.Info;
             this.txtVolume.Location = new System.Drawing.Point(128, 32);
             this.txtVolume.Name = "txtVolume";
-            this.txtVolume.Size = new System.Drawing.Size(109, 22);
+            this.txtVolume.Size = new System.Drawing.Size(56, 22);
             this.txtVolume.TabIndex = 3;
             this.txtVolume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVolume_KeyPress);
             // 
@@ -241,14 +229,12 @@
             this.txtEdicao.BackColor = System.Drawing.SystemColors.Info;
             this.txtEdicao.Location = new System.Drawing.Point(128, 88);
             this.txtEdicao.Name = "txtEdicao";
-            this.txtEdicao.Size = new System.Drawing.Size(109, 22);
+            this.txtEdicao.Size = new System.Drawing.Size(56, 22);
             this.txtEdicao.TabIndex = 8;
             this.txtEdicao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdicao_KeyPress);
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(243, 146);
             this.label11.Name = "label11";
@@ -259,6 +245,7 @@
             // cbxTipo
             // 
             this.cbxTipo.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipo.FormattingEnabled = true;
             this.cbxTipo.Items.AddRange(new object[] {
             "Livro",
@@ -274,14 +261,12 @@
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(243, 174);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 16);
+            this.label12.Size = new System.Drawing.Size(85, 16);
             this.label12.TabIndex = 22;
-            this.label12.Text = "Nome Seção";
+            this.label12.Text = "Nome seção";
             // 
             // dadosGrid
             // 
@@ -313,7 +298,7 @@
             this.dadosGrid.ReadOnly = true;
             this.dadosGrid.RowHeadersWidth = 51;
             this.dadosGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dadosGrid.Size = new System.Drawing.Size(692, 262);
+            this.dadosGrid.Size = new System.Drawing.Size(593, 262);
             this.dadosGrid.TabIndex = 20;
             this.dadosGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dadosGrid_CellDoubleClick);
             // 
@@ -321,7 +306,7 @@
             // 
             this.colCodItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.colCodItem.FillWeight = 152.2843F;
-            this.colCodItem.HeaderText = "Codigo";
+            this.colCodItem.HeaderText = "Código";
             this.colCodItem.MinimumWidth = 6;
             this.colCodItem.Name = "colCodItem";
             this.colCodItem.ReadOnly = true;
@@ -395,6 +380,7 @@
             this.colStatus.MinimumWidth = 6;
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
+            this.colStatus.Visible = false;
             // 
             // colEditora
             // 
@@ -423,7 +409,7 @@
             this.btn_Salvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Salvar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Salvar.ForeColor = System.Drawing.Color.Black;
-            this.btn_Salvar.Location = new System.Drawing.Point(467, 201);
+            this.btn_Salvar.Location = new System.Drawing.Point(368, 201);
             this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(113, 27);
@@ -438,7 +424,7 @@
             this.btn_Excluir.Enabled = false;
             this.btn_Excluir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.ForeColor = System.Drawing.Color.Black;
-            this.btn_Excluir.Location = new System.Drawing.Point(588, 201);
+            this.btn_Excluir.Location = new System.Drawing.Point(489, 201);
             this.btn_Excluir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(113, 27);
@@ -466,55 +452,46 @@
             // 
             // txtNomeAutor
             // 
-            this.txtNomeAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeAutor.BackColor = System.Drawing.SystemColors.Window;
             this.txtNomeAutor.Location = new System.Drawing.Point(344, 116);
             this.txtNomeAutor.Name = "txtNomeAutor";
             this.txtNomeAutor.ReadOnly = true;
-            this.txtNomeAutor.Size = new System.Drawing.Size(328, 22);
+            this.txtNomeAutor.Size = new System.Drawing.Size(229, 22);
             this.txtNomeAutor.TabIndex = 9;
             // 
             // txtEditora
             // 
-            this.txtEditora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEditora.BackColor = System.Drawing.SystemColors.Window;
             this.txtEditora.Location = new System.Drawing.Point(344, 144);
             this.txtEditora.Name = "txtEditora";
             this.txtEditora.ReadOnly = true;
-            this.txtEditora.Size = new System.Drawing.Size(328, 22);
+            this.txtEditora.Size = new System.Drawing.Size(229, 22);
             this.txtEditora.TabIndex = 12;
             // 
             // txtLocal
             // 
-            this.txtLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLocal.BackColor = System.Drawing.SystemColors.Window;
             this.txtLocal.Location = new System.Drawing.Point(344, 88);
             this.txtLocal.Name = "txtLocal";
             this.txtLocal.ReadOnly = true;
-            this.txtLocal.Size = new System.Drawing.Size(328, 22);
+            this.txtLocal.Size = new System.Drawing.Size(229, 22);
             this.txtLocal.TabIndex = 6;
             // 
             // txtSecao
             // 
-            this.txtSecao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSecao.BackColor = System.Drawing.SystemColors.Window;
             this.txtSecao.Location = new System.Drawing.Point(344, 172);
             this.txtSecao.Name = "txtSecao";
             this.txtSecao.ReadOnly = true;
-            this.txtSecao.Size = new System.Drawing.Size(328, 22);
+            this.txtSecao.Size = new System.Drawing.Size(229, 22);
             this.txtSecao.TabIndex = 15;
             // 
             // btnCarregarSecao
             // 
-            this.btnCarregarSecao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCarregarSecao.FlatAppearance.BorderSize = 0;
             this.btnCarregarSecao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarregarSecao.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
-            this.btnCarregarSecao.Location = new System.Drawing.Point(678, 171);
+            this.btnCarregarSecao.Location = new System.Drawing.Point(579, 171);
             this.btnCarregarSecao.Name = "btnCarregarSecao";
             this.btnCarregarSecao.Size = new System.Drawing.Size(23, 22);
             this.btnCarregarSecao.TabIndex = 16;
@@ -523,11 +500,10 @@
             // 
             // btnCarregarLocal
             // 
-            this.btnCarregarLocal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCarregarLocal.FlatAppearance.BorderSize = 0;
             this.btnCarregarLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarregarLocal.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
-            this.btnCarregarLocal.Location = new System.Drawing.Point(678, 87);
+            this.btnCarregarLocal.Location = new System.Drawing.Point(579, 87);
             this.btnCarregarLocal.Name = "btnCarregarLocal";
             this.btnCarregarLocal.Size = new System.Drawing.Size(23, 22);
             this.btnCarregarLocal.TabIndex = 7;
@@ -536,11 +512,10 @@
             // 
             // brnCarregarEditora
             // 
-            this.brnCarregarEditora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.brnCarregarEditora.FlatAppearance.BorderSize = 0;
             this.brnCarregarEditora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brnCarregarEditora.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
-            this.brnCarregarEditora.Location = new System.Drawing.Point(678, 143);
+            this.brnCarregarEditora.Location = new System.Drawing.Point(579, 143);
             this.brnCarregarEditora.Name = "brnCarregarEditora";
             this.brnCarregarEditora.Size = new System.Drawing.Size(23, 22);
             this.brnCarregarEditora.TabIndex = 13;
@@ -549,11 +524,10 @@
             // 
             // btnCarregarAutor
             // 
-            this.btnCarregarAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCarregarAutor.FlatAppearance.BorderSize = 0;
             this.btnCarregarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarregarAutor.Image = global::Cadastro_de_Item_Acervo.Properties.Resources.magnifying_glass_icon;
-            this.btnCarregarAutor.Location = new System.Drawing.Point(678, 115);
+            this.btnCarregarAutor.Location = new System.Drawing.Point(579, 115);
             this.btnCarregarAutor.Name = "btnCarregarAutor";
             this.btnCarregarAutor.Size = new System.Drawing.Size(23, 22);
             this.btnCarregarAutor.TabIndex = 10;
@@ -565,7 +539,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(713, 503);
+            this.ClientSize = new System.Drawing.Size(614, 503);
             this.Controls.Add(this.btnCarregarSecao);
             this.Controls.Add(this.txtSecao);
             this.Controls.Add(this.btnCarregarLocal);
@@ -602,7 +576,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " Cadastro de Item Acervo";
+            this.Text = " Cadastro de item acervo";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dadosGrid)).EndInit();
             this.ResumeLayout(false);
